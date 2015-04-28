@@ -26,7 +26,7 @@ graphviz 2.38.0, R 3.1.3.
 
 ## How to run the experiments
 
-For the sensory model
+For the sensory model:
 
 1. cd to the rtexp directory
 2. Run the experiment:
@@ -60,7 +60,8 @@ For the sensory model
     * mean and standard error of RT for neutral trials
     * mean and standard error of RT for invalid trials
 
-For the motor model
+For the motor model:
+
 1. cd to the rtexp directory
 2. Compile the integrate-and-fire network C++ module:
   
