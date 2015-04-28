@@ -40,8 +40,8 @@ For the sensory model
   2. sigma: noise intensity, sigma > 0
   3. tmax: maximum time the target can appear
   4. r: probability that the target will appear
-     on the left, given by a valid cue (0.5 < r <= 1)
-  5. acmin: minimum accuracy (0 <= acmin <= 1)
+     on the left, given by a valid cue (0.5 < r ≤ 1)
+  5. acmin: minimum accuracy (0 ≤ acmin ≤ 1)
   6. exp_type: experiment type (SRT or CRT)
   7. REPS: number of trials (REPS > 0)
 3. The output is:
@@ -63,13 +63,27 @@ For the sensory model
 For the motor model
 1. cd to the rtexp directory
 2. Compile the integrate-and-fire network C++ module:
+  
+  ```
   $ python setup.py install --install-lib=.
+  ```
 3. Run the experiment using one of the configurations. For instance:
+
+  ```
   $ python setup.py <exp1.cfg>
+  ```
+  
   The first figure in the article showing the motor model's results corresponds to configurations 1, 2, 7, and 8.
   The second figure corresponds to configurations 3, 4, 5, 6, 7, and 8.
 4. Analyse the results:
+
+  ```
   $ python analyse_motor.py <exp1.cfg>
   $ python rtss.py
+  ```
 5. Visualize network structure:
+
+  ```
   $ python view_network.py <exp1.cfg> | dot -Tps -o <g1.ps>
+  ```
+  
