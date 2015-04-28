@@ -21,8 +21,8 @@ along with rtexp.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Test system
 
-The experiments were tested on a 64-bit Linux system running Python 3.4.3
-and graphviz 2.38.0.
+The experiments were tested on a 64-bit Linux system running Python 3.4.3,
+graphviz 2.38.0, R 3.1.3.
 
 ## How to run the experiments
 
@@ -67,7 +67,7 @@ For the motor model
   ```
   $ python setup.py install --install-lib=.
   ```
-3. Run the experiment using one of the configurations. For instance:
+3. Run the experiment using one of the configurations (exp*.cfg files). For instance:
 
   ```
   $ python setup.py <exp1.cfg>
@@ -86,4 +86,9 @@ For the motor model
   ```
   $ python view_network.py <exp1.cfg> | dot -Tps -o <g1.ps>
   ```
+
+Generate article figures from the results in included CSV files:
+```
+$ Rscript plots.R
+```
   
