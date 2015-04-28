@@ -1,0 +1,8 @@
+results/*
+optimization/*
+build
+exptest.cfg
+ifnn-1.0-py3.4.egg-info
+ifnn.cpython-34m.so
+ifnn/test.py
+ifnn/test_output.txt
