@@ -1,5 +1,6 @@
-# Code for the experiments in Feher da Silva, C.; Baldo, M. V. C.
-"Computational models of simple and choice reaction time tasks."
+# rtexp
+
+Code for the experiments in Feher da Silva, C.; Baldo, M. V. C. "Computational models of simple and choice reaction time tasks."
 
 Copyright 2014, 2015 Carolina Feher da Silva
 
@@ -29,9 +30,11 @@ For the sensory model
 
 1. cd to the rtexp directory
 2. Run the experiment:
+
   ```
   $ python exp_bayesian_rt.py <s> <sigma> <tmax> <r> <acmin> <exp_type> [<REPS>]
   ```
+  
   where:
   1. s: stimulus intensity, s > 0
   2. sigma: noise intensity, sigma > 0
