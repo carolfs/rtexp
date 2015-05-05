@@ -213,7 +213,7 @@ if __name__ == '__main__':
     for t, (ve, vd), (ne, nd), (ive, ivd) in zip(range(1, tmax * 10 + 1), trial(Seq, r, ta, s, sigma), trial(Seq, 0.5, ta, s, sigma), trial(Seq, 1 - r, ta, s, sigma)):
         print(t, ve, vd, ne, nd, ive, ivd, sep="\t")
         assert (ve >= ne and ne >= ive and vd <= nd and vd <= ivd)
-        assert(ve > ive or ive == 1)
-        assert(vd < ivd or vd == 1)
+        assert(ve > ive or (ve == 0 or ive == 1))
+        assert(vd < ivd or (vd == 1 or ivd == 0))
     assert (ve + vd >= (1 - 1e-10) and ne + nd >= (1 - 1e-10) and ive + ivd >= (1 - 1e-10))
   
