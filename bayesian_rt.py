@@ -194,19 +194,23 @@ if __name__ == '__main__':
         # Probability that the target will appear on the left (given by the cue)
         r = float(sys.argv[4])
         assert 0.5 < r and r <= 1
+        # When will the target appear?
+        ta = int(sys.argv[5])
+        # When will the target appear?
+        assert ta >= 1 and ta <= tmax
     except:
-        print("This script expects four parameters:")
+        print("This script expects five parameters:")
         print("  1. s: stimulus intensity, s > 0")
         print("  2. sigma: noise intensity, sigma > 0")
         print("  3. tmax: maximum time the target can appear")
         print("  4. r: probability that the target will appear "\
               "on the left, given by a valid cue (0.5 < r <= 1)")
+        print("  5. ta: when the target will actually appear "\
+              "(1 <= r <= tmax)")
         sys.exit(0)
   
     # Runs a trial of an RT experiment
     
-    # When will the target appear?
-    ta = random.randint(1, tmax)
     # Sequence of stimuli
     Seq = [S(i + 1, l, ta, s, sigma) for i in range(tmax * 10)]
     # Run trial
